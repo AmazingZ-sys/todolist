@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin:0;
+        padding:0;
+        list-style: none;
+    }
+    body{
+        background-color: #CDCDCD;
+        font-size: 16px;
+    }
+    header{
+        width: 100%;
+        height: 50px;
+        background-color: #333;
+    }
+    header span{
+        line-height: 50px;
+        color:#DDDDDD;
+        font-size: 24px;
+    }
+    header label{
+        display: block;
+        width: 600px;
+        height: 50px;
+        margin: 0 auto;
+    }
+    header input{
+        float: right;
+        width: 60%;
+        height: 24px;
+        margin-top: 12px;
+        text-indent: 10px;
+        border-radius: 5px;
+        box-shadow: 0 1px 0 rgba(255,255,255,0.24), 0 1px 6px rgba(0,0,0,0.45) inset;
+        border:none;
+        outline: none;
+    }
+    .thingbox{
+        width: 600px;
+        height: auto;
+        margin:0 auto;
+    }
+    .thingbox h1{
+        display: block;
+        width: auto;
+        height: 31px;
+        font-size: 1.5em;
+        margin:20px 0;
+        position: relative;
+    }
+    .thingbox span{
+        position: absolute;
+        top: 2px;
+        right: 5px;
+        display: inline-block;
+        padding:0 5px;
+        height: 20px;
+        border-radius: 20px;
+        background-color: #e6e6fa;
+        line-height: 22px;
+        text-align: center;
+        color: #666;
+        font-size: 14px;
+    }
+    .thingbox li{
+        height: 32px;
+        line-height: 32px;
+        background-color: #fff;
+        position: relative;
+        margin-bottom: 10px;
+        padding:0 45px;
+        border-radius: 3px;
+        border-left: 5px solid #629a9c;
+        box-shadow: 0 1px 2px rgba(0,0,0,0.07);
+        display: flex;
+    }
+    .thingbox2{
+        width: 600px;
+        height: auto;
+        margin:0 auto;
+    }
+    .thingbox2 h1{
+        display: block;
+        width: auto;
+        height: 31px;
+        font-size: 1.5em;
+        margin:20px 0;
+        position: relative;
+    }
+    .thingbox2 span{
+        position: absolute;
+        top: 2px;
+        right: 5px;
+        display: inline-block;
+        padding:0 5px;
+        height: 20px;
+        border-radius: 20px;
+        background-color: #e6e6fa;
+        line-height: 22px;
+        text-align: center;
+        color: #666;
+        font-size: 14px;
+    }
+    .thingbox2 li{
+        height: 32px;
+        line-height: 32px;
+        background-color: #e0e0e0;
+        opacity: 0.7;
+        position: relative;
+        margin-bottom: 10px;
+        padding:0 45px;
+        border-radius: 3px;
+        border-left: 5px solid #629a9c;
+        box-shadow: 0 1px 2px rgba(0,0,0,0.07);
+        display: flex;
+    }
+    li .input1{
+        margin-top: 4px;
+        position: absolute;
+        top: 2px;
+        left: 10px;
+        width: 22px;
+        height: 22px;
+        cursor: pointer;
+    }
+    li p{
+        display: block;
+        width: 505px;
+        height: 32px;
+        position: relative;
+    }
+    li .input2{
+        width: 100%;
+        height: 32px;
+        margin-top: 0;
+        font-size: 16px;
+        outline: none;
+        border:1px solid #fff;
+        box-sizing: border-box;
+        border-left: none;
+        border-right: none;
+        border-radius: 0;
+        box-shadow: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    li a{
+        position: absolute;
+        top: 2px;
+        right: 5px;
+        display: inline-block;
+        width: 14px;
+        height: 12px;
+        border-radius: 14px;
+        border:6px double #fff;
+        background-color: #ccc;
+        line-height: 14px;
+        text-align: center;
+        color: #fff;
+        font-size: 14px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+</style>
+<body>
+    <header>
+        <label for="">
+            <span>ToDoList</span>
+            <input type="text" placeholder="添加ToDo">
+        </label>
+        <div class="thingbox">
+            <div class="title">
+                <h1>正在进行<span id="todocount">2</span></h1>
+            </div>
+            <div class="item">
+                <!--<ol class="todolist">-->
+                    <!--<li class="content">-->
+                        <!--<input class="input1" type="checkbox">-->
+                        <!--<p class="neirong">hadgksgdkwd</p>-->
+                        <!--<input class="input2" type="text">-->
+                        <!--<a href="javascript:;">-</a>-->
+                    <!--</li>-->
+                <!--</ol>-->
+            </div>
+        </div>
+        <div class="thingbox2">
+            <div class="title">
+                <h1>已经完成<span id="todocoun">2</span></h1>
+            </div>
+            <div class="item">
+                <!--<ol class="todolist">-->
+                    <!--<li class="content">-->
+                        <!--<input class="input1" type="checkbox">-->
+                        <!--<p class="neirong">hadgksgdkwd</p>-->
+                        <!--<input class="input2" type="text">-->
+                        <!--<a href="javascript:;">-</a>-->
+                    <!--</li>-->
+                <!--</ol>-->
+            </div>
+        </div>
+    </header>
+</body>
+</html>
+<script>
+    let arr1 = localStorage.arr1? localStorage.arr1.split(","): [];
+    let arr2 = localStorage.arr2? localStorage.arr2.split(","): [];
+    let num1 = document.querySelector("#todocount");
+    let num2 = document.querySelector("#todocoun");
+    let thingbox = document.querySelector(".thingbox");
+    let thingbox2 = document.querySelector(".thingbox2");
+    let item = document.querySelector(".thingbox .item");
+    let item2 = document.querySelector(".thingbox2 .item");
+
+    let input1 = document.querySelector("input");
+
+    input1.onkeydown = function (e) {
+        if (e.keyCode == 13 && input1.value!=""){
+            arr1.unshift(input1.value);
+            input1.value="";
+            update();
+        }
+    };
+    function update() {
+        localStorage.arr1=arr1.join(",");
+        localStorage.arr2=arr2.join(",");
+        item.innerText="";
+        item2.innerText="";
+        console.log(item)
+        num1.innerHTML = arr1.length;
+        num2.innerHTML = arr2.length;
+        arr1.forEach(function (value, index) {
+            let li = document.createElement("li");
+            li.className = "content";
+            let input1 = document.createElement("input");
+            input1.className = "input1";
+            input1.type = "checkbox";
+            input1.onclick=function () {
+                arr1.splice(index,1);
+                arr2.unshift(value);
+                update()
+            };
+            let p = document.createElement("p");
+            p.className = "neirong";
+            p.innerHTML=value;
+            p.ondblclick = function () {
+                let input2 = document.createElement("input");
+                input2.type = "text";
+                input2.className = "input2";
+                input2.setAttribute("autofocus","autofocus");
+                p.appendChild(input2);
+                input2.value = p.innerText;
+                input2.onkeydown = function(e){
+                    if (e.keyCode == 13 && input2.value != ""){
+                        arr1[index] = input2.value;
+                        update()
+                    }
+                };
+                input2.onblur = function () {
+                    if (input2.value != ""){
+                        arr1[index] = input2.value;
+                        update()
+                    }
+                }
+            };
+            let a = document.createElement("a");
+            a.innerText = "-";
+            a.onclick=function(){
+                arr1.splice(index,1);
+                update()
+            };
+            item.appendChild(li);
+            li.appendChild(input1);
+            li.appendChild(p);
+            li.appendChild(a);
+        });
+
+        arr2.forEach(function (value, index) {
+            let li = document.createElement("li");
+            li.className = "content";
+            let input1 = document.createElement("input");
+            input1.type = "checkbox";
+            input1.className = "input1";
+            input1.checked="checked";
+            input1.onclick=function () {
+                arr2.splice(index,1);
+                arr1.unshift(value);
+                update()
+            };
+            let p = document.createElement("p");
+            p.className = "neirong";
+            p.innerHTML=value;
+            p.ondblclick = function () {
+                let input2 = document.createElement("input");
+                input2.type = "text";
+                input2.className = "input2";
+                input2.setAttribute("autofocus","autofocus");
+                p.appendChild(input2);
+                input2.value = p.innerText;
+                let flag = true;
+                input2.onkeydown = function(e){
+                    if (e.keyCode == 13 && input2.value != ""){
+                        flag = false
+                        arr2[index] = input2.value;
+                        update()
+                    }
+                };
+                input2.onblur = function () {
+                    if (input2.value != "" && flag==true){
+                        console.log("失去焦点")
+                        arr2[index] = input2.value;
+                        update()
+                    }
+                }
+            };
+            let a = document.createElement("a");
+            a.innerText = "-";
+            a.onclick=function(){
+                arr2.splice(index,1);
+                update()
+            };
+            item2.appendChild(li);
+            li.appendChild(input1);
+            li.appendChild(p);
+            li.appendChild(a);
+        });
+
+    };
+    update()
+</script>
